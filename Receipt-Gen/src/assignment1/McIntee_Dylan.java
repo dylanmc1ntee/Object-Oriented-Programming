@@ -1,6 +1,7 @@
 package assignment1;
 import java.util.Scanner;
 import java.util.Random;
+import java.lang.Math;
 
 public class McIntee_Dylan{
 
@@ -127,34 +128,36 @@ public class McIntee_Dylan{
 
         System.out.print("Write item name ");
         itemName = scan.nextLine();
-        
-        do {
+
+        while (!(itemName.equals("DONE"))) {
 
             System.out.print("Write price ");
             double curItem = scan.nextDouble();
             scan.nextLine();
-
-            System.out.print("Item number " + numItems + " " + itemName + "  ");
             
             if(itemName.equals("Food") || itemName.equals("food")) {
 
-                System.out.println(curItem);
-                totalPrice += curItem;
                 numItems++;
+                System.out.print("Item number " + numItems + " " + itemName + "  ");
+                double updatedPrice = Math.round(curItem);
+                totalPrice += updatedPrice;
+                System.out.format("%.1f\n", updatedPrice);
 
             }
             else {
 
-                System.out.println((curItem * TAX));
-                totalPrice += (curItem * TAX);
                 numItems++;
+                System.out.print("Item number " + numItems + " " + itemName + "  ");
+                double updatedPrice = (Math.round(curItem * TAX));
+                totalPrice += updatedPrice;
+                System.out.format("%.1f\n", updatedPrice);
 
             }
 
             System.out.print("Write item name ");
             itemName = scan.nextLine();
-
-        } while (!(itemName.equals("DONE")));
+            
+        }
 
         System.out.println(numItems + " items      total " + totalPrice);
 
