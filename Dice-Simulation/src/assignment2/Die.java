@@ -19,6 +19,6 @@ public class Die {
 
     public void roll(){
         Random random = new Random(); // creates the random
-        this.faceValue = random.nextInt(7); // gets a random num between 0-7
+        this.faceValue = random.nextInt(6) + 1; // gets a random num between 0-6
     }
 }
