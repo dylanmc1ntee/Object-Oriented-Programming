@@ -15,7 +15,7 @@
 <p>Assignment 2:</p>
 
 <ul>
-  <li>Inheritism/li>
+  <li>Inheritism</li>
   <li>Abstract Classes</li>
 </ul>
 
